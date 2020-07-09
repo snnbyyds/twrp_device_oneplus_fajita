@@ -183,3 +183,43 @@ ifneq ($(wildcard bootable/recovery/installer/.),)
     USE_RECOVERY_INSTALLER := true
     RECOVERY_INSTALLER_PATH := bootable/recovery/installer
 endif
+
+#########################################################
+#
+# SHRP SPECIFIC FLAGS
+#
+#########################################################
+# Path of your SHRP Tree
+SHRP_PATH := $(LOCAL_PATH)
+# Maintainer name
+SHRP_MAINTAINER := snnbyyds
+# Device codename
+SHRP_DEVICE_CODE := fajita
+# put this 0 if device has no EDL mode
+SHRP_EDL_MODE := 1
+SHRP_EXTERNAL := /external_sd
+SHRP_INTERNAL := /sdcard
+SHRP_OTG := /usb_otg
+# Put 0 to disable flashlight
+SHRP_FLASH := 1
+# These are led paths, find yours then put here (Optional)
+#SHRP_CUSTOM_FLASHLIGHT := true
+#SHRP_FONP_1 := /sys/class/leds/led:torch_0/brightness
+#SHRP_FONP_2 := /sys/class/leds/led:torch_1/brightness
+#SHRP_FONP_3 := /sys/class/leds/led:switch/brightness
+# Max Brightness of LED (Optional)
+#SHRP_FLASH_MAX_BRIGHTNESS := 200
+# Check your device's recovery path, dont use blindly
+SHRP_REC := no_recovery_partition
+# Recovery Type (It can be treble,normal,SAR) [Only for About Section]
+SHRP_REC_TYPE := normal
+# Recovery Type (It can be A/B or A_only) [Only for About Section]
+SHRP_DEVICE_TYPE := A/B
+# Use this flag only if your device is A/B
+SHRP_AB := true
+# SHRP Express, enables on-the-fly theme patching (also persistent) + persistent lock
+SHRP_EXPRESS := true
+# SHRP Padding Flag (Only for rounded corner devices.)
+#SHRP_STATUSBAR_RIGHT_PADDING := 40
+#SHRP_STATUSBAR_LEFT_PADDING := 40
+#########################################################
