@@ -14,12 +14,8 @@
 // limitations under the License.
 //
 
-soong_namespace {
-    imports: ["hardware/qcom/bootctrl"],
-}
-
 cc_library {
     name: "bootctrl.sdm845",
     defaults: ["bootctrl_hal_defaults"],
-    static_libs: ["libgptutils.oneplus6t"],
+    static_libs: ["libgptutils.oneplus_sdm845"],
 }

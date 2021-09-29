@@ -16,7 +16,7 @@
 
 
 cc_library {
-    name: "libgptutils.oneplus6t",
+    name: "libgptutils.oneplus_sdm845",
     vendor: true,
     recovery_available: true,
     shared_libs: [
@@ -30,10 +30,6 @@ cc_library {
     ],
     srcs: [
         "gpt-utils.cpp",
-    ],
-    owner: "qti",
-    header_libs: [
-        "generated_kernel_headers",
     ],
     export_include_dirs: ["."],
 }
