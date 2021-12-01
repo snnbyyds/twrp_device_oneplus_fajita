@@ -87,3 +87,7 @@ TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
 # Fastbootd (Custom ROM)
 PRODUCT_PACKAGES += \
 	fastbootd
+	
+# HACK: Set vendor patch level
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.build.security_patch=2099-12-31

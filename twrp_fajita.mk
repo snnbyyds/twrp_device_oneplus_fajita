@@ -19,18 +19,18 @@ PRODUCT_RELEASE_NAME := fajita
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/pb/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/oneplus/fajita/device.mk)
 
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root)																								
-
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := fajita
-PRODUCT_NAME := omni_fajita
+PRODUCT_NAME := twrp_fajita
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := OnePlus A6013
 PRODUCT_MANUFACTURER := OnePlus
@@ -40,7 +40,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_PRODUCT=OnePlus6T \
     TARGET_DEVICE=OnePlus6T \
 	PRODUCT_DEVICE=OnePlus6T
-
-# HACK: Set vendor patch level
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.build.security_patch=2099-12-31
