@@ -1,4 +1,2 @@
-ro.display.series=OnePlus 6T
 ro.product.board=sdm845
 ro.board.platform=sdm845
-vendor.gatekeeper.disable_spu=true
