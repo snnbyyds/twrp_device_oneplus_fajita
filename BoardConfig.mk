@@ -120,6 +120,7 @@ PLATFORM_VERSION := 127
 #PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 PLATFORM_SECURITY_PATCH := 2127-12-31
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
+TW_USE_FSCRYPT_POLICY := 1
 
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
@@ -152,5 +153,14 @@ TW_OVERRIDE_SYSTEM_PROPS := \
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 
-
+TW_QCOM_ATS_OFFSET := 1634734118
 PRODUCT_ENFORCE_VINTF_MANIFEST := true
+
+#
+# For local builds only
+#
+# TWRP zip installer
+ifneq ($(wildcard bootable/recovery/installer/.),)
+    USE_RECOVERY_INSTALLER := true
+    RECOVERY_INSTALLER_PATH := bootable/recovery/installer
+endif
