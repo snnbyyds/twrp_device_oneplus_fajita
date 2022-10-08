@@ -17,5 +17,5 @@
 cc_library {
     name: "bootctrl.sdm845",
     defaults: ["bootctrl_hal_defaults"],
-    static_libs: ["libgptutils.oneplus_sdm845"],
+    static_libs: ["libgptutils"],
 }
