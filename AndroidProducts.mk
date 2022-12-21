@@ -17,6 +17,6 @@
 #
 
 PRODUCT_MAKEFILES := \
-     $(LOCAL_DIR)/twrp_fajita.mk
+     $(LOCAL_DIR)/omni_fajita.mk
 
-COMMON_LUNCH_CHOICES := twrp_fajita-eng
+COMMON_LUNCH_CHOICES := omni_fajita-eng

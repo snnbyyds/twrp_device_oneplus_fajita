@@ -23,15 +23,15 @@ DEVICE_PATH := device/oneplus/fajita
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
-# Inherit some common twrp stuff.
-$(call inherit-product, vendor/twrp/config/common.mk)
+# Inherit some common omni stuff.
+$(call inherit-product, vendor/pb/config/common.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/oneplus/fajita/device.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := fajita
-PRODUCT_NAME := twrp_fajita
+PRODUCT_NAME := omni_fajita
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := OnePlus A6013
 PRODUCT_MANUFACTURER := OnePlus

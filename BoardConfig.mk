@@ -175,11 +175,7 @@ PRODUCT_ENFORCE_VINTF_MANIFEST := true
 BOARD_AVB_ENABLE := false
 BOARD_BUILD_DISABLED_VBMETAIMAGE := true
 
-#
-# For local builds only
-#
-# TWRP zip installer
-ifneq ($(wildcard bootable/recovery/installer/.),)
-    USE_RECOVERY_INSTALLER := true
-    RECOVERY_INSTALLER_PATH := bootable/recovery/installer
-endif
+# PBRP specific build flags
+PB_DISABLE_DEFAULT_TREBLE_COMP := true
+PB_TORCH_PATH := "/sys/class/leds/led:torch_0"
+PB_DISABLE_DEFAULT_DM_VERITY := true
