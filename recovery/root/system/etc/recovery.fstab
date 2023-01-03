@@ -53,3 +53,4 @@ vendor							/vendor			squashfs	ro								wait,slotselect,avb,logical,first_stag
 # The update_engine code looks for this entry in order to determine the boot device address
 # and fails if it does not find it.
 /dev/block/bootdevice/by-name/misc			/misc			emmc		defaults							defaults
+/devices/platform/soc/a600000.ssusb/a600000.dwc3/xhci-hcd.0.auto*	/storage/usbotg	auto	defaults,nosuid,nodev						wait,voldmanaged=usbotg:auto
