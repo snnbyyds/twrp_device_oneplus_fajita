@@ -24,10 +24,10 @@ AB_OTA_PARTITIONS += \
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
-	cppreopts.sh \
+    cppreopts.sh \
     update_engine \
     update_verifier \
-	update_engine_sideload
+    update_engine_sideload
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -59,12 +59,12 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # fastbootd
 PRODUCT_PACKAGES += \
-	fastbootd \
-	android.hardware.fastboot@1.0-impl-mock \
-	android.hardware.fastboot@1.0-impl-mock.recovery
+    fastbootd \
+    android.hardware.fastboot@1.0-impl-mock \
+    android.hardware.fastboot@1.0-impl-mock.recovery
 
 PRODUCT_PRODUCT_PROPERTIES += \
-	ro.fastbootd.available=true
+    ro.fastbootd.available=true
 
 # Health HAL
 PRODUCT_PACKAGES += \
