@@ -59,8 +59,12 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # fastbootd
 PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
-    fastbootd
+	fastbootd \
+	android.hardware.fastboot@1.0-impl-mock \
+	android.hardware.fastboot@1.0-impl-mock.recovery
+
+PRODUCT_PRODUCT_PROPERTIES += \
+	ro.fastbootd.available=true
 
 # Health HAL
 PRODUCT_PACKAGES += \
