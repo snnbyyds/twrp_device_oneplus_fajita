@@ -27,6 +27,11 @@
 
 import /init.recovery.qcom_decrypt.rc
 
+on init
+    # Disable UFS powersaving
+    write /sys/devices/platform/soc/1d84000.ufshc/clkgate_enable 0
+    write /sys/devices/platform/soc/1d84000.ufshc/hibern8_on_idle_enable 0
+
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
